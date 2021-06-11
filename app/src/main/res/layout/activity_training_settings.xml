@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7090ff"
+    android:orientation="vertical"
+    tools:context=".TrainingSettings">
+
+    <Button android:id="@+id/buttonSeeExercises"
+        android:layout_height="80dp"
+        android:layout_width="220dp"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/see_and_add_exercises"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:textColor="@android:color/white"
+        android:onClick="buttonClickSeeExercises"/>
+
+    <LinearLayout android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:divider="@drawable/width_divider"
+        android:showDividers="middle"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/editTextNumberOfExercises"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/text_views_blue"
+            android:gravity="center"
+            android:hint="@string/number_of_exercises_for_training"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:autofillHints="@string/number_of_exercises_for_training"/>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSpinners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button android:id="@+id/buttonSetTime"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:text="@string/next"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:textColor="@android:color/white"
+        android:onClick="buttonClickSetTime"/>
+
+
+</LinearLayout>

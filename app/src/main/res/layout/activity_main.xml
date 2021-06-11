@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7090ff"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/textViewWelcomeMessage"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_add_new_exercise"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:background="@drawable/rounded_button"/>
+
+    <Button android:id="@+id/buttonSetTraining"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/start_button"
+        android:textStyle="bold|italic"
+        android:textSize="38sp"
+        android:textColor="@android:color/white"
+        android:onClick="buttonClickSeeTrainingSettings"/>
+
+    <ImageView android:layout_height="220dp"
+        android:layout_width="220dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/timer"
+        android:id="@+id/imageViewTimer"
+        android:contentDescription="@string/stopwatch_image"/>
+
+</LinearLayout>

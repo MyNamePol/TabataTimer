@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7090ff"
+    tools:context=".TimeActivity"
+    android:orientation="vertical">
+
+    <EditText android:id="@+id/editTextWorkTime"
+        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_entering_working_time"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:textColorHint="@android:color/white"
+        android:singleLine="true"
+        android:inputType="number"
+        android:autofillHints="@string/hint_entering_working_time"/>
+
+    <EditText android:id="@+id/editTextRestTimeExercise"
+        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_entering_rest_time"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:textColorHint="@android:color/white"
+        android:singleLine="true"
+        android:inputType="number"
+        android:autofillHints="@string/hint_entering_rest_time"/>
+
+    <EditText android:id="@+id/editTextPauseAfterSet"
+        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:hint="@string/hint_entering_pause_time"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:textColorHint="@android:color/white"
+        android:singleLine="true"
+        android:inputType="number"
+        android:autofillHints="@string/hint_entering_pause_time"/>
+
+    <EditText
+        android:id="@+id/editTextNumberOfSets"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:hint="@string/hint_entering_number_of_sets"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="16sp"
+        android:autofillHints="@string/hint_entering_number_of_sets"/>
+
+    <Button android:id="@+id/buttonTakeDefault"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:text="@string/button_set_default"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:onClick="buttonClickSetDefault"/>
+
+    <TextView
+        android:id="@+id/textViewTimeResults"
+        android:layout_width="400dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_views_blue"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="22sp" />
+
+    <Button android:id="@+id/buttonSetTime"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:text="@string/button_start_training"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:onClick="buttonClickStartTraining"/>
+
+</LinearLayout>
