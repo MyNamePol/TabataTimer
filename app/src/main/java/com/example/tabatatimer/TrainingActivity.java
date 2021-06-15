@@ -37,7 +37,7 @@ public class TrainingActivity extends AppCompatActivity {
     private ArrayList<String> arrayListTrainingPlanExercises;
 
     private TextView textViewNumberOfSets, textViewExerciseTime, textViewCurrentExercise;
-    private Button buttonMusicOnOff;
+    private Button buttonMusicOnOff , buttonPause , buttonStart;
     private TextToSpeech mTTS;
 
     private TrainingTime trainingTime;
@@ -54,6 +54,9 @@ public class TrainingActivity extends AppCompatActivity {
 
         initializeVariablesAndViews();
         startTraining();
+
+        buttonStart.setClickable(false);
+        buttonPause.setClickable(true);
     }
 
     private void initializeVariablesAndViews() {
@@ -78,6 +81,8 @@ public class TrainingActivity extends AppCompatActivity {
 
     private void initializeButtons() {
         buttonMusicOnOff = findViewById(R.id.buttonMusicOnOff);
+        buttonPause = findViewById(R.id.buttonPause);
+        buttonStart = findViewById(R.id.buttonStart);
     }
 
     private void initializeTextToSpeech() {
@@ -467,6 +472,8 @@ public class TrainingActivity extends AppCompatActivity {
 
     public void buttonClickPause(View view) {
         stopTraining();
+        buttonStart.setClickable(true);
+        buttonPause.setClickable(false);
     }
 
     private void stopTraining() {
@@ -476,6 +483,8 @@ public class TrainingActivity extends AppCompatActivity {
 
     public void buttonClickStart(View view) {
         startTraining();
+        buttonStart.setClickable(false);
+        buttonPause.setClickable(true);
     }
 
     public void buttonClickStartFromBeginning(View view)
@@ -484,6 +493,8 @@ public class TrainingActivity extends AppCompatActivity {
         AlertDialog.Builder alert = createAndSetDataForAlertDialogBuilder();
         setAlertDialogBuilderButtons(alert);
         showAlertDialogBuilder(alert);
+
+
     }
 
     private AlertDialog.Builder createAndSetDataForAlertDialogBuilder()
@@ -511,6 +522,8 @@ public class TrainingActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int whichButton) {
                 resetTheTraining();
                 startTraining();
+                buttonStart.setClickable(false);
+                buttonPause.setClickable(true);
             }
         });
     }
